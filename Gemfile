@@ -7,3 +7,6 @@ gem 'capybara'
 gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'pg'
+gem 'sass'
+gem "sprockets"
+

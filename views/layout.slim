@@ -1,7 +1,14 @@
 doctype html
 html
   head
-    title Sinatra Form Ap
+    title Sinatra Form App
+    link href="assets/index.css" rel="stylesheet" type="text/css"
 
   body
     == yield
+    script src="assets/lib/lib.js"
+
+    - if ENV['RACK_ENV'] == 'production'
+      script src="assets/app.prod/app.js"
+    - else
+      script type="text/jsx" src="assets/app/app.js"
