@@ -1,2 +1,12 @@
 h1 Home Page
 p This is the homepage
+h2 Add a thing to the thing list
+form action="/add-thing" method="POST"
+  label for="new-thing" New Thing
+  input#new-thing type="text" name="thing[name]"
+  input type="submit" value="Add"
+
+h2 List of things
+ul.thing-list
+  - @things.each do |thing|
+    li #{thing.name}
